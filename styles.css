@@ -41,15 +41,14 @@ body {
 
 /* Estilos de productos */
 .products {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuadrícula de 4 columnas */
     gap: 10px;
     padding: 10px;
     flex: 1;
 }
 
 .product {
-    width: 200px;
     border: 1px solid #ddd;
     border-radius: 5px;
     text-align: center;
@@ -75,24 +74,21 @@ body {
 /* Media Query para pantallas pequeñas (como móviles) */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
+        display: flex;
     }
 
     .sidebar {
-        width: 100%;
-        display: none; /* Escondemos el sidebar en móviles inicialmente */
+        width: 200px;
+        display: block; /* Mantenemos el sidebar visible en móviles */
     }
 
     .hamburguesa {
-        display: block; /* Mostramos el icono de hamburguesa en móviles */
-        background-color: #4CAF50;
-        color: white;
-        text-align: center;
+        display: none; /* Ocultamos el icono de hamburguesa ya que el menú es visible */
     }
 
     .products {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Tres columnas en dispositivos móviles */
+        grid-template-columns: repeat(4, 1fr); /* Mantener 4 columnas en móviles */
         gap: 10px;
     }
 
