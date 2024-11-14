@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo _ tienda _ virtual</title>
+    <title>Catálogo _ tienda </title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- Icono de tres rayas (menú hamburguesa) -->
+<div class="hamburguesa" onclick="toggleMenu()">☰</div>
+
 <div class="container">
-    <!-- Sidebar de categorías -->
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
         <h3>Categorías</h3>
         <a href="#" onclick="loadImages('hombre-s')">Suéter Hombre (Talla S)</a>
         <a href="#" onclick="loadImages('hombre-m')">Suéter Hombre (Talla M)</a>
@@ -22,12 +24,12 @@
         <a href="#" onclick="loadImages('camisillas')">Camisillas</a>
     </div>
 
-    <!-- Contenedor de productos -->
     <div class="products" id="product-container">
-        <!-- Aquí se cargarán los productos dinámicamente -->
+        <!-- Los productos cargados aparecerán aquí -->
     </div>
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
+

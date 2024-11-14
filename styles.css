@@ -4,7 +4,15 @@ body {
 
 .container {
     display: flex;
-    flex-wrap: wrap; /* Esto permitirá que los elementos se ajusten en pantallas más pequeñas */
+    flex-wrap: wrap;
+}
+
+/* Icono de menú hamburguesa */
+.hamburguesa {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
 }
 
 /* Sidebar de categorías */
@@ -67,21 +75,30 @@ body {
 /* Media Query para pantallas pequeñas (como móviles) */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Cambia la dirección de la flexbox a columna en pantallas pequeñas */
+        flex-direction: column;
     }
 
     .sidebar {
-        width: 100%; /* El sidebar ocupa el 100% del ancho en móviles */
+        width: 100%;
+        display: none; /* Escondemos el sidebar en móviles inicialmente */
+    }
+
+    .hamburguesa {
+        display: block; /* Mostramos el icono de hamburguesa en móviles */
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
     }
 
     .products {
-        display: grid; /* Usamos grid para un mejor control en pantallas pequeñas */
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Las tarjetas de productos se ajustan */
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 10px;
     }
 
     .product {
-        width: 100%; /* Cada producto ocupa todo el ancho disponible */
+        width: 100%;
     }
 }
+
 
