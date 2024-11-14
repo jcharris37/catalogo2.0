@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Suéteres</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Sidebar de categorías -->
+    <div class="sidebar">
+        <h3>Categorías</h3>
+        <a href="#" onclick="loadImages('hombre-s')">Suéter Hombre (Talla S)</a>
+        <a href="#" onclick="loadImages('hombre-m')">Suéter Hombre (Talla M)</a>
+        <a href="#" onclick="loadImages('hombre-l')">Suéter Hombre (Talla L)</a>
+        <a href="#" onclick="loadImages('hombre-xl')">Suéter Hombre (Talla XL)</a>
+        <a href="#" onclick="loadImages('damas')">Suéter Dama</a>
+        <a href="#" onclick="loadImages('parejas')">Suéter de Parejas</a>
+        <a href="#" onclick="loadImages('Estampados')">Suéteres Estampados</a>
+        <a href="#" onclick="loadImages('camisillas')">Camisillas</a>
+    </div>
+
+    <!-- Contenedor de productos -->
+    <div class="products" id="product-container">
+        <!-- Aquí se cargarán los productos dinámicamente -->
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
