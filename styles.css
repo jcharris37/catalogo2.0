@@ -4,6 +4,7 @@ body {
 
 .container {
     display: flex;
+    flex-wrap: wrap; /* Esto permitirá que los elementos se ajusten en pantallas más pequeñas */
 }
 
 /* Sidebar de categorías */
@@ -62,3 +63,25 @@ body {
     color: red;
     font-weight: bold;
 }
+
+/* Media Query para pantallas pequeñas (como móviles) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia la dirección de la flexbox a columna en pantallas pequeñas */
+    }
+
+    .sidebar {
+        width: 100%; /* El sidebar ocupa el 100% del ancho en móviles */
+    }
+
+    .products {
+        display: grid; /* Usamos grid para un mejor control en pantallas pequeñas */
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Las tarjetas de productos se ajustan */
+        gap: 10px;
+    }
+
+    .product {
+        width: 100%; /* Cada producto ocupa todo el ancho disponible */
+    }
+}
+
